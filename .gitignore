@@ -5,6 +5,27 @@
 .env.test.local
 .env.production.local
 .env.*
+# File chứa Secrets & API Keys
+*.env
 
+# Môi trường ảo (Virtual Environment)
+venv/
+.venv/
+env/
+ENV/
+
+# Python Cache & Chế độ biên dịch
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Cấu hình IDE / Editors
+.vscode/
+.idea/
+*.swp
+
+# Logs & hệ thống
+*.log
+.DS_Store
 # Ngoại lệ: Vẫn theo dõi tệp cấu hình mẫu (nếu có)
 !.env.example
