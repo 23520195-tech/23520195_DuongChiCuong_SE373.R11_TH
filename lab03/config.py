@@ -24,7 +24,7 @@ for model_name in RAW_FALLBACK_CHAIN:
         BASE_FALLBACK_CHAIN.append(model_name)
 
 
-def get_llm_with_fallback(temperature: float = 0):
+def get_llm_with_fallback():
     """
     Khởi tạo LLM chính cùng chuỗi Fallback tự động trong LangChain.
     Nếu model chính lỗi, hệ thống sẽ tự động thử các model tiếp theo theo đúng thứ tự ưu tiên.
@@ -35,8 +35,7 @@ def get_llm_with_fallback(temperature: float = 0):
     llm_instances = [
         ChatGoogleGenerativeAI(
             model=m,
-            google_api_key=GEMINI_API_KEY,
-            temperature=temperature
+            google_api_key=GEMINI_API_KEY
         )
         for m in BASE_FALLBACK_CHAIN
     ]
