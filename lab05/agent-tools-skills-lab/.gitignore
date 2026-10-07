@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.pytest_cache/
+
+# Ignore tất cả các loại file .env (.env, .env.local, .env.development, v.v.)
+.env
+.env.*
+.env.local
+
+# Ngoại lệ: Vẫn commit các file mẫu/template (nếu có) để team biết các biến cần dùng
+!.env.example
+!.env.sample
+!.env.template
